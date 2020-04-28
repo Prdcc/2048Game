@@ -254,6 +254,7 @@ char Board::toDirection(int n){
 		case 3:
 			return 'D';
 			break;
+		default: return randomDirection();
 	}
 }
 
@@ -278,7 +279,7 @@ int Board::findMaximum() const {
 	return maximum;
 }
 
-Matrix Board::getNetworkBoard() {
+Matrix Board::getNetworkBoard() const{
 	Matrix m{ 16,1 };
 	for (size_t i = 0; i < 4; i++) {
 		for (size_t j = 0; j < 4; j++) {

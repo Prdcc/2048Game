@@ -1,9 +1,9 @@
 #pragma once
 #include <string>
-#include "../../NeuralNetwork/NeuralNetwork/Matrix.h"
+#include "Matrix.h"
 class Board {
 public:
-	const double CHANCEOF4 = 0.25;
+	double CHANCEOF4 = 0.25;
 private:
 	int m_board[4][4];
 	long m_score;
@@ -24,6 +24,6 @@ public:
 	bool hasAvailableMoves()const;
 	static char randomDirection();
 	int findMaximum()const;
-	Matrix getNetworkBoard();
+	Matrix getNetworkBoard()const;
 };
 

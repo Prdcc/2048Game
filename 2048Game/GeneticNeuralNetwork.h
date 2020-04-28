@@ -1,6 +1,7 @@
 #pragma once
-#include "../../NeuralNetwork/NeuralNetwork/Matrix.h"
+#include "Matrix.h"
 #include "Board.h"
+#include <iostream>
 class GeneticNeuralNetwork {
 private:
 	std::vector<Matrix> m_neurons;
@@ -15,14 +16,14 @@ private:
 	}
 public:
 	void feedForward(Matrix m);
-	Matrix getResult() const {
+	Matrix getResult() {
 		return m_neurons.back();
 	}
 	size_t getFinalLayerSize() const {
 		return m_sizes.back();
 	}
+	void randomVariation(double standardDeviation = 0.2, double mean = 0.0 );
 	GeneticNeuralNetwork();
 	GeneticNeuralNetwork(const std::vector<size_t> &sizes);
 	~GeneticNeuralNetwork();
 };
-
