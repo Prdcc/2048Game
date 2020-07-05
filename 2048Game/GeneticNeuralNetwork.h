@@ -25,5 +25,6 @@ public:
 	void randomVariation(double standardDeviation = 0.2, double mean = 0.0 );
 	GeneticNeuralNetwork();
 	GeneticNeuralNetwork(const std::vector<size_t> &sizes);
+	GeneticNeuralNetwork(const GeneticNeuralNetwork &copy);
 	~GeneticNeuralNetwork();
 };

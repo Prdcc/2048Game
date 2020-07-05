@@ -41,6 +41,14 @@ GeneticNeuralNetwork::GeneticNeuralNetwork(const std::vector<size_t>& sizes) : m
 	m_neurons.at(m_layers - 1) = Matrix(sizes.at(m_layers - 1), 1, false);
 }
 
+GeneticNeuralNetwork::GeneticNeuralNetwork(const GeneticNeuralNetwork & copy) :
+	m_layers{ copy.m_layers },
+	m_sizes{ copy.m_sizes },
+	m_neurons{ copy.m_neurons },
+	m_biases{ copy.m_biases },
+	m_weights{ copy.m_weights } {}
+
+
 GeneticNeuralNetwork::~GeneticNeuralNetwork() {}
 
 
